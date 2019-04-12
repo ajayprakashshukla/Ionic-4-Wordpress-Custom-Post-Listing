@@ -1,0 +1,34 @@
+.headertitle {
+    color: var(--ion-color-primary);
+}
+
+.profilepic {
+    margin-top: 100px;
+    height: 100px;
+    width: 100px;
+}
+ion-card-title {
+    font-size: 20px;
+}
+
+.ionbutton {
+    height: 160px;
+}
+
+.headersubtitle {
+    padding:0 15px 15px;
+}
+
+.likes {
+    color: var(--ion-color-medium);
+}
+
+ion-card {
+    margin-bottom: 20px;
+}
+
+ion-avatar {
+    margin-top: -40px;
+    margin-left: 10px;
+    z-index: 1000;
+}

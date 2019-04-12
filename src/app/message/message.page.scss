@@ -1,0 +1,23 @@
+.message {
+  padding: 10px !important;
+  border-radius: 10px !important;
+  margin-bottom: 4px !important;
+}
+.my-message {
+  background: var(--ion-color-tertiary) !important;
+  color: #ffffff;
+}
+.other-message {
+  background: var(--ion-color-primary) !important;
+  color: #dfdfdf !important;
+}
+.time {
+  color: #dfdfdf;
+  float: right;
+  font-size: small;
+}
+
+.msg-btn {
+ /* font-size: x-large; */
+ max-height: 36px;
+}

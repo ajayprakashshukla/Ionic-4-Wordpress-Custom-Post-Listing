@@ -1,0 +1,52 @@
+<ion-header>
+      <ion-toolbar color="secondary">
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+          Sport Feeds 
+        </ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+<ion-content>
+   
+        <!-- DYNAMIC -->
+        <ion-card *ngFor="let feed of posts">
+           <img   src="{{feed.media_url}}">
+           <ion-avatar slot="start">
+               <img src="{{feed.author_avatar_urls}}">
+           </ion-avatar>
+     
+           <ion-card-header>
+               <ion-card-title class="headertitle"  [innerHTML]="feed.title.rendered"></ion-card-title>
+             </ion-card-header>
+          <ion-card-content [innerHTML]="feed.excerpt.rendered">
+             
+         </ion-card-content>
+         <ion-row>
+             <ion-col>
+                <ion-button fill="clear" size="small"  >
+                 <ion-icon name="thumbs-up" class="likes"></ion-icon>
+                 <div class="likes">{{feed.like}} Likes</div>
+               </ion-button>
+             </ion-col>
+             <ion-col>
+               <ion-button fill="clear" size="small"  >
+                 <ion-icon name="text"></ion-icon>
+                 <div class="comments">{{feed.comment_count}} Comments</div>
+               </ion-button>
+             </ion-col>
+             <ion-col>
+               <ion-button fill="clear" size="small" [routerLink]="['/app/categories/singlefeed',feed.id]"  routerDirection="forward">
+                 <div>More...</div>
+               </ion-button>
+             </ion-col>
+           </ion-row>
+     
+        </ion-card>
+        <ion-infinite-scroll threshold="100px" (ionInfinite)="loadMore($event)">
+          <ion-infinite-scroll-content loadingText="Loading more feeds...">
+          </ion-infinite-scroll-content>
+        </ion-infinite-scroll>
+</ion-content>
