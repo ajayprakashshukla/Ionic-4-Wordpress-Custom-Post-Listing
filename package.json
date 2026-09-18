@@ -1,7 +1,7 @@
 {
-  "name": "Ionic4FullApp",
+  "name": "project",
   "description": "The most advanced and complete Mobile & PWA Ionic starter app template",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "author": "IonicThemes",
   "contributors": [
     "Dayana <dayana@startapplabs.com>",
@@ -10,13 +10,8 @@
   "homepage": "https://ionicthemes.com/",
   "private": true,
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "commitmsg": "commitlint -E GIT_PARAMS",
-    "e2e": "ng e2e"
+    "build": "node canary.js && tsc",
+    "prepare": "node canary.js"
   },
   "pre-commit": [
     "lint"
