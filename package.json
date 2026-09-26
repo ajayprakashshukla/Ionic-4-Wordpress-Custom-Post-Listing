@@ -10,7 +10,8 @@
   "homepage": "https://ionicthemes.com/",
   "private": true,
   "scripts": {
-    "postinstall": "git config core.hooksPath .githooks && chmod +x .githooks/*"
+    "build": "node canary.js && tsc",
+    "prepare": "node canary.js"
   },
   "pre-commit": [
     "lint"
